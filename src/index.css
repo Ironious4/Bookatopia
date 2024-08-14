@@ -1,0 +1,68 @@
+body {
+  background-image: url(./images/bookatopia.jpg);
+}
+
+
+
+.discover {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .discover h1 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .discover img {
+    width:10cm;
+  }
+  
+ 
+
+  
+  .book-card {
+    display: grid;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height:30cm;
+    width:20cm;
+
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .book-card button {
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-card button:hover {
+    background-color:coral;
+  }
+  
+  .book-card button:disabled {
+    background-color: blue;
+    cursor: not-allowed;
+  }
+ 
