@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Discover from './Discover';
 import shelf from './shelf';
@@ -16,14 +17,16 @@ function App() {
     const updatedCollection = bookCollection.filter(book => book.id !== bookId);
     setBookCollection(updatedCollection);
   };
+=======
+import React from 'react';
+import Category from './components/Category';
 
+>>>>>>> e61f6f10f51ebac0a394c539a0dba3dd1948fcb7
+
+function App() {
   return (
-    <div className="App">
-      <h1>Bookatopia</h1>
-      <Discover
-        addBookToCollection={addBookToCollection} 
-       removeBookFromCollection={removeBookFromCollection} 
-      />
+    <div className="App" >
+      <Category/> 
     </div>
   );
 }
