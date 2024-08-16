@@ -1,0 +1,80 @@
+ .quest {
+    background-image: url('./background.jpg'); 
+  
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    .goal-section {
+      margin-bottom: 30px;
+    }
+    
+    .goal-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    .goal-section input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    .goal-section p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
+    
+    .challenges-section {
+      text-align: left;
+    }
+    
+    .challenges-section h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .challenges-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .challenges-section li {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    
+    .challenges-section li:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .challenges-section li.completed {
+      text-decoration: line-through;
+      color: #999;
+      background-color: #e0e0e0;
+    }
+    
