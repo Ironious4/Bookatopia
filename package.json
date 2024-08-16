@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "json": "^11.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
+    "react-scripts": "^5.0.1"
+=======
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -24,5 +28,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+>>>>>>> e61f6f10f51ebac0a394c539a0dba3dd1948fcb7
   }
 }
