@@ -1,25 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Discover from './Discover';
+import Quest from './components/Quest;
+import Home from './components/Home;
 
 function App() {
-  const [bookCollection, setBookCollection] = useState([]);
-
-  const addBookToCollection = (newBook) => {
-    setBookCollection([...bookCollection, newBook]);
-  };
-
-  const removeBookFromCollection = (bookId) => {
-    const updatedCollection = bookCollection.filter(book => book.id !== bookId);
-    setBookCollection(updatedCollection);
-  };
-
-  return (
+ return (
     <div className="App">
-      <h1>Bookatopia</h1>
-      <Discover
-        addBookToCollection={addBookToCollection} 
-       removeBookFromCollection={removeBookFromCollection} 
-      />
+      <h1>Welcome to Bookatopia</h1>
+      <Discover/>
+      <Home/>
+      <Quest/>
     </div>
   );
 }
