@@ -1,15 +1,11 @@
 import React from 'react';
-import Discover from './Discover';
-import Quest from './components/Quest;
-import Home from './components/Home;
+import Category from './components/Category';
+
 
 function App() {
- return (
-    <div className="App">
-      <h1>Welcome to Bookatopia</h1>
-      <Discover/>
-      <Home/>
-      <Quest/>
+  return (
+    <div className="App" >
+      <Category/> 
     </div>
   );
 }
