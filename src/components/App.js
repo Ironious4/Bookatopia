@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import Discover from './Discover';
+import shelf from './shelf';
 
 function App() {
   const [bookCollection, setBookCollection] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [books, setBooks] = useState([]);
+
 
   const addBookToCollection = (newBook) => {
     setBookCollection([...bookCollection, newBook]);
