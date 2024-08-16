@@ -39,7 +39,7 @@ function CustomList({ user, books }) {
 
   return (
     <div style={styles.container}>
-      <h4 style={styles.title}>{user.name}'s Custom Lists</h4>
+      <h4 style={styles.title}>{user.name} Custom Lists</h4>
       {customLists.map(list => (
         <div key={list.id} style={styles.listContainer}>
           <h5 style={styles.listTitle}>{list.name}</h5>
