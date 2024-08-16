@@ -1,36 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import Genre from './Genre';
-import Sidebar from './Sidebar';
 
 const Category = () => {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/genres')
-      .then(response => response.json())
-      .then(data => {
-        console.log('fetched data',data); // Log data to check its structure
-        setGenres(data.genres || []); // Use an empty array if `genres` is not found
-      })
-      .catch(error => console.error('Error fetching data:', error));
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch('https://potterapi-fedeperin.vercel.app/en/books');
+        const data = await response.json();
+        
+        
+        const groupedBooks = data.reduce((acc, book) => {
+          const genre = book.genre || 'Unknown'; 
+          if (!acc[genre]) {
+            acc[genre] = [];
+          }
+          acc[genre].push({
+            title: book.title,
+            author: book.author,
+            image: book.cover || 'https://via.placeholder.com/150', 
+          });
+          return acc;
+        }, {});
+
+        
+        const genreArray = Object.keys(groupedBooks).map((genre) => ({
+          genre,
+          books: groupedBooks[genre],
+        }));
+
+        setGenres(genreArray);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      }
+    };
+
+    fetchBooks();
   }, []);
-  
+
   return (
     <div style={styles.container}>
-      <Sidebar />
       <div style={styles.mainContent}>
         <h1>Genres</h1>
-        {genres && genres.length > 0 ? (
+        {genres.length > 0 ? (
           genres.map((genre) => (
             <Genre key={genre.genre} genre={genre.genre} books={genre.books} />
           ))
         ) : (
-          <p>No genres available.</p>
+          <p>Loading books...</p>
         )}
       </div>
     </div>
   );
-  
 };
 
 const styles = {
@@ -40,7 +62,7 @@ const styles = {
   mainContent: {
     flex: 1,
     padding: '20px',
-    backgroundColor: '#fde6a2',
+    backgroundColor: 'white',
   },
 };
 
