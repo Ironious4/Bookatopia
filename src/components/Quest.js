@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Quest.css'; 
 
 function Quest() {
@@ -11,12 +11,26 @@ function Quest() {
   ]);
 
   const handleGoalChange = (e) => {
-    setGoal(e.target.value);
+    setGoal(Number(e.target.value));
   };
 
   const handleProgressChange = (e) => {
-    setProgress(e.target.value);
+    setProgress(Number(e.target.value));
   };
+
+  useEffect(() => {
+    if (goal >= 1 && progress >= goal) {
+      setChallenges(challenges.map(challenge => ({
+        ...challenge,
+        completed: true,
+      })));
+    } else {
+      setChallenges(challenges.map(challenge => ({
+        ...challenge,
+        completed: false,
+      })));
+    }
+  }, [progress, goal]);
 
   const toggleChallengeCompletion = (id) => {
     setChallenges(
