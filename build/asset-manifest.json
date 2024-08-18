@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Bookatopia/static/css/main.14f3ec9d.css",
+    "main.js": "/Bookatopia/static/js/main.760501f5.js",
+    "static/media/bookatopia.jpg": "/Bookatopia/static/media/bookatopia.d7efafe3fcada8fe76b0.jpg",
+    "index.html": "/Bookatopia/index.html",
+    "main.14f3ec9d.css.map": "/Bookatopia/static/css/main.14f3ec9d.css.map",
+    "main.760501f5.js.map": "/Bookatopia/static/js/main.760501f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14f3ec9d.css",
+    "static/js/main.760501f5.js"
+  ]
+}
