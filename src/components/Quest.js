@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Quest.css'; 
+import './Quest.css';
 
 function Quest() {
   const [goal, setGoal] = useState(0);
@@ -19,17 +19,23 @@ function Quest() {
   };
 
   useEffect(() => {
-    if (goal >= 1 && progress >= goal) {
-      setChallenges(challenges.map(challenge => ({
-        ...challenge,
-        completed: true,
-      })));
-    } else {
-      setChallenges(challenges.map(challenge => ({
-        ...challenge,
-        completed: false,
-      })));
-    }
+    setChallenges(
+      challenges.map(challenge => {
+        if (challenge.id === 1) {
+         
+          return {
+            ...challenge,
+            completed: goal >= 5 && progress >= 5,
+          };
+        } else {
+          
+          return {
+            ...challenge,
+            completed: goal >= 1 && progress >= goal,
+          };
+        }
+      })
+    );
   }, [progress, goal]);
 
   const toggleChallengeCompletion = (id) => {
