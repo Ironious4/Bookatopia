@@ -22,16 +22,14 @@ function Quest() {
     setChallenges(
       challenges.map(challenge => {
         if (challenge.id === 1) {
-         
           return {
             ...challenge,
-            completed: goal >= 5 && progress >= 5,
+            completed: progress >= 5, 
           };
         } else {
-          
           return {
             ...challenge,
-            completed: goal >= 1 && progress >= goal,
+            completed: progress > 1, 
           };
         }
       })
