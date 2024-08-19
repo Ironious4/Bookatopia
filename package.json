@@ -1,23 +1,42 @@
 {
-  "name": "json-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github./Ironious4/Bookatopia"
-  },
-  "author": "Tyrone Kariuki",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ironious4/Bookatopia/issues"
-  },
-  "homepage": "https://github.com/Ironious4/Bookatopia#readme",
-  "dependencies": {
-    "json-server": "^0.17.1"
+  "name": "react-hooks-bot-battlr-code-challenge",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-scripts": "^4.0.1",
+      "semantic-ui-css": "^2.4.1",
+      "web-vitals": "^0.2.4"
+    },
+    "devDependencies": {
+      "gh-pages": "^6.1.1",
+      "json-server": "^0.15.1"
+    },
+    "scripts": {
+      "start": "set PORT=8001 && react-scripts start",
+      "predeploy":"npm run build",
+      "deploy":"gh-pages -d build",
+      "build":"react-scripts build",
+      "server": "json-server --watch db.json -p 8002"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
   }
-}
+  
